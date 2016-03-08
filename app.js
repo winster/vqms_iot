@@ -84,6 +84,7 @@ function exit() {
 }
 
 process.on('SIGINT', function () {
+  pir.unexport();
   lcd.close();
   process.exit();
 });
